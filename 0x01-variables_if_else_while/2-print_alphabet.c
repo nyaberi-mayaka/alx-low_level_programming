@@ -1,8 +1,17 @@
 #include<stdio.h>
-/*
- *main
+/**
+ *main -Prints the alphabet in lowercase, followed by a new line.
  *
- *return -always 0
+ *Return: Always 0.
  */
-int main(){
-  
+int main(void)
+{
+	char letter;
+
+	for (letter = 'a'; letter <= 'z' letter++)
+	{
+		putchar(letter);
+	}
+	putchar('\n');
+	return (0);
+}
