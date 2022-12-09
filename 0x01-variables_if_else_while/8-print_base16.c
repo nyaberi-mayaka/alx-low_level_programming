@@ -16,7 +16,7 @@ int main(void)
 	{
 		putchar((hexan % 10) + '0');
 	}
-	for (hexa = 'A'; hexa <= 'F'; hexa++)
+	for (hexa = 'a'; hexa <= 'f'; hexa++)
 	{
 		putchar(hexa);
 	}
