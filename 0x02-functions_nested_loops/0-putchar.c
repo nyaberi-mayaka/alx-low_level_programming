@@ -1,7 +1,6 @@
 #include "main.h"
-
+#include <unistd.h>
 /**
- *
  *main - prints _putchar, followed by a new line.
  *
  *Return: Always 0.
@@ -9,23 +8,16 @@
 
 int main(void)
 {
-	_putchar('_');
+	char word[8] = "_putchar";
+	int i;
 
-	_putchar('p');
-
-	_putchar('u');
-
-	_putchar('t');
-
-	_putchar('c');
-
-	_putchar('h');
-
-	_putchar('a');
-
-	_putchar('r');
+	for (i = 0; i < 8; i++)
+	{
+		_putchar(word[i]);
+	}
 
 	_putchar('\n');
 
 	return (0);
+
 }
