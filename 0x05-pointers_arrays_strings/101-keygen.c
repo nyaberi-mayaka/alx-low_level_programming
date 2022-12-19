@@ -1,24 +1,35 @@
-#include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
-void rand_str(char *, size_t);
+/**
+ * main - program that generates random valid
+ * passwords for the program 101-crackme
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	int pass[100];
+	int i, sum, n;
 
-int main(void) {
-    char str[] = { [14] = '\1' }; // make the last character non-zero so we can test based on it later
-    rand_str(str, sizeof str - 1);
-    assert(str[14] == '\0');      // test the correct insertion of string terminator
-    puts(str);
-}
+	sum = 0;	
 
-void rand_str(char *dest, size_t length) {
-    char charset[] = "0123456789"
-                     "abcdefghijklmnopqrstuvwxyz"
-                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	srand(time(NULL));
 
-    while (length-- > 0) {
-        size_t index = (double) rand() / RAND_MAX * (sizeof charset - 1);
-        *dest++ = charset[index];
-    }
-    *dest = '\0';
+	for (i = 0; i < 100; i++)
+	{
+		pass[i] = rand() % 78;
+		sum += (pass[i] + '0');
+		putchar(pass[i] + '0');
+		if ((2772 - sum) - '0' < 78)
+		{
+			n = 2772 - sum - '0';
+			sum += n;
+			putchar(n + '0');
+			break;
+		}
+	}
+
+	return (0);
 }
