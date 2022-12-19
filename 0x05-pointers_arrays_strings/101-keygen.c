@@ -1,28 +1,24 @@
+#include <assert.h>
 #include <stdio.h>
-#include <time.h>
 #include <stdlib.h>
 
-/**
- *main - generates random password.
- *Return: zero.
- */
+void rand_str(char *, size_t);
 
-int main(void)
-{
-	int passwd, pass;
+int main(void) {
+    char str[] = { [14] = '\1' }; // make the last character non-zero so we can test based on it later
+    rand_str(str, sizeof str - 1);
+    assert(str[14] == '\0');      // test the correct insertion of string terminator
+    puts(str);
+}
 
-	srand(time(NULL));
+void rand_str(char *dest, size_t length) {
+    char charset[] = "0123456789"
+                     "abcdefghijklmnopqrstuvwxyz"
+                     "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-	pass = 0;
-
-	while (pass <= 2645)
-	{
-		passwd = (passwd % 128);
-		pass += passwd;
-		printf("%c", passwd);
-	}
-
-	printf("%c", 2772 - pass);
-
-	return (0);
+    while (length-- > 0) {
+        size_t index = (double) rand() / RAND_MAX * (sizeof charset - 1);
+        *dest++ = charset[index];
+    }
+    *dest = '\0';
 }
