@@ -13,11 +13,16 @@ int main(void)
 
 	srand(time(NULL));
 
-	passwd = rand();
+	pass = 0;
 
-	if (passwd >= 1)
-		pass = (passwd % 1000) * 50;
-	printf("%c", pass);
+	while (pass <= 2645)
+	{
+		passwd = (passwd % 128);
+		pass += passwd;
+		printf("%c", passwd);
+	}
+
+	printf("%c", 2772 - pass);
 
 	return (0);
 }
