@@ -2,38 +2,34 @@
 #include <stdlib.h>
 
 /**
- * main - adds two numbers and prints the result.
- * @argc: argument count.
- * @argv: argument vector.
- *
- * Return: 0
+ * main - adds multiple numbers
+ * @argc: number of command line arguments
+ * @argv: array containing the command line arguments
+ * Return: 0 if executed successfully
  */
 
 int main(int argc, char *argv[])
 {
-	long int add, x;
-	int i;
+	int sum = 0;
+	int i, j;
 
-	add = 0;
-	x = 0;
-	if (argc == 1)
+	for (i = 1; i < argc; i++)
 	{
-		printf("%d\n", 0);
-		return (0);
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (argv[i][j] > '9' || argv[i][j] < '0')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
 	}
 
 	for (i = 1; i < argc; i++)
 	{
-		x = strtol(argv[i], NULL, 10);
-
-		if (x == 0 && *argv[i] != '0')
-		{
-			printf("Error\n");
-			return (1);
-		}
-
-		add += x;
+		sum += atoi(argv[i]);
 	}
-	printf("%ld\n", add);
+
+	printf("%d\n", sum);
 	return (0);
 }
