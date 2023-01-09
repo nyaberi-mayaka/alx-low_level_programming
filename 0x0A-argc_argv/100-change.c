@@ -1,20 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int check(int);
-
 /**
- * main - prints the minimum number of coins to make change for an amount of
- * of money.
- * @argc: argument count.
- * @argv: argument vector.
- *
- * Return: 0.
+ * main - minimum number of coins to make change
+ * for an amount of money
+ * @argc: number of command line arguments
+ * @argv: array containing the command line arguments
+ * Return: 0 if executed successfully
  */
 
 int main(int argc, char *argv[])
 {
-	int count = 0;
+	int coins[] = {25, 10, 5, 2, 1};
+	int cents, minimum_coins, i;
 
 	if (argc != 2)
 	{
@@ -22,76 +20,24 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	if (atoi(argv[1]) < 0)
+	cents = atoi(argv[1]);
+	minimum_coins = 0;
+
+	if (cents < 0)
 	{
-		printf("%d\n", 0);
+		printf("0\n");
 		return (0);
 	}
-	count = check(atoi(argv[1]));
-/*
-	if (count == 0 && _atoi(argv[1]) != 0)
+
+	for (i = 0; i < 5 && cents >= 0; i++)
 	{
-		return (0);
-	}
-	*/
-	printf("%d\n", count);
-	return (0);
-}
-
-/**
- * check - calculates the minimum number of coins to make change for an
- * amount of money.
- * @n: The amount of money to make change.
- *
- * Return: The minimum number of coins to give change.
- */
-
-int check(int n)
-{
-	if (n == 0)
-		return (0);
-	else if (n == 1)
-		return (1);
-	else if (n >= 2 && n < 5)
-		return (1 + check(n - 2));
-	else if (n >= 5 && n < 10)
-		return (1 + check(n - 5));
-	else if (n >= 10 && n < 25)
-		return (1 + check(n - 10));
-	else if (n >= 25)
-		return (1 + check(n - 25));
-	else
-		return (0);
-}
-
-
-/**
- * _atoi - a function that converts string to integer
- * @s: An input string
- * Return: integer from conversion
- */
-int _atoi(char *s)
-{
-	int sign = 1;
-	int total = 0;
-
-	while (*s)
-	{
-		if (*s == '-')
-			sign *= -1;
-
-		if (*s >= '0' && *s <= '9')
+		while (coins[i] <= cents)
 		{
-			total = total * 10 + *s - '0';
-
-			if (*(s + 1) < '0' || *(s + 1) > '9')
-				break;
+			cents -= coins[i];
+			minimum_coins++;
 		}
-		s++;
 	}
+	printf("%d\n", minimum_coins);
 
-	if (sign < 0)
-		total = (-total);
-
-	return (total);
+	return (0);
 }
