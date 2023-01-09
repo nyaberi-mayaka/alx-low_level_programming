@@ -1,6 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-int _atoi(char *s);
 int check(int);
 
 /**
@@ -22,18 +22,18 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 
-	else if (_atoi(argv[1]) < 0)
+	if (atoi(argv[1]) < 0)
 	{
 		printf("%d\n", 0);
 		return (0);
 	}
-	count = check(_atoi(argv[1]));
-
+	count = check(atoi(argv[1]));
+/*
 	if (count == 0 && _atoi(argv[1]) != 0)
 	{
 		return (0);
 	}
-
+	*/
 	printf("%d\n", count);
 	return (0);
 }
@@ -48,9 +48,7 @@ int main(int argc, char *argv[])
 
 int check(int n)
 {
-	if (n < 0)
-		return (0);
-	else if (n == 0)
+	if (n == 0)
 		return (0);
 	else if (n == 1)
 		return (1);
