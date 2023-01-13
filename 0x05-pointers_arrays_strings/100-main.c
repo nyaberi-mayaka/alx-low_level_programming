@@ -22,8 +22,7 @@ int main(void)
   printf("%d\n", n);
   n = _atoi("Suite 402");
   printf("%d\n", n);
-  n = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA
-94111 - USA             ");
+  n = _atoi("         +      +    -    -98 Battery Street; San Francisco, CA94111 - USA             ");
   printf("%d\n", n);
   n = _atoi("---++++ -++ Sui - te -   402 #cisfun :)");
   printf("%d\n", n);
