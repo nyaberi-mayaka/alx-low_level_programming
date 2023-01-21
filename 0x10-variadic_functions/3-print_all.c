@@ -39,7 +39,7 @@ void print_all(const char * const format, ...)
  * switch_case - prints the various types of arguments using switch case.
  * @format: constant pointer to address of const type of variable.
  * @i: The position of the address pointed to from the base address.
- * @types: The varible argument list passed an argument.
+ * @types: The varible argument list passed as an argument.
  *
  * Return: void.
  */
