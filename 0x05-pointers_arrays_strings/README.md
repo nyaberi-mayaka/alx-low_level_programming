@@ -5,9 +5,7 @@
     </div>
     <div class="panel-body">
       <p>
-        <em>For this project, we expect you to look at these concepts:</em>
-      </p>
-
+        <em>For this project, we expect you to look at these concepts:</em></p>
       <ul>
           <li>
             <a href="/concepts/60">Pointers and arrays</a>
