@@ -3,18 +3,6 @@
     <div class="panel-heading">
       <h3 class="panel-title">Concepts</h3>
     </div>
-    <div class="panel-body">
-      <p>
-        <em>For this project, we expect you to look at this concept:</em>
-      </p>
-
-      <ul>
-          <li>
-            <a href="/concepts/26">C programming</a>
-          </li>
-      </ul>
-    </div>
-  </div>
 
 <div class="panel panel-default" id="project-description">
   <div class="panel-body">

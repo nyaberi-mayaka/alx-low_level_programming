@@ -15,7 +15,6 @@
           </li>
       </ul>
     </div>
-  </div>
 
 <div class="panel-body">
 
