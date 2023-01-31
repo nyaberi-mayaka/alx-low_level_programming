@@ -7,14 +7,12 @@
       <p>
         <em>For this project, we expect you to look at this concept:</em>
       </p>
-
       <ul>
           <li>
             <a href="/concepts/60">Pointers and arrays</a>
           </li>
       </ul>
     </div>
-  </div>
 
   <div class="panel-body">
     <h2>Resources</h2>
