@@ -596,7 +596,7 @@ julien@ubuntu:~/0x13. More singly linked lists$
 <li>if the list is empty, return <code>0</code></li>
 </ul>
 
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 8-main.c 
+<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 8-main.c
 #include &lt;stdlib.h&gt;
 #include &lt;string.h&gt;
 #include &lt;stdio.h&gt;
@@ -627,9 +627,9 @@ int main(void)
     return (0);
 }
 julien@ubuntu:~/c0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 8-main.c 3-add_nodeint_end.c 5-free_listint2.c 8-sum_listint.c -o i
-julien@ubuntu:~/0x13. More singly linked lists$ ./i 
+julien@ubuntu:~/0x13. More singly linked lists$ ./i
 sum = 1534
-julien@ubuntu:~/0x13. More singly linked lists$ 
+julien@ubuntu:~/0x13. More singly linked lists$
 </code></pre>
 
   </div>
@@ -639,11 +639,6 @@ julien@ubuntu:~/0x13. More singly linked lists$
     </h3>
 
 <div class="panel-body">
-    <span id="user_id" data-id="202475"></span>
-
-    <!-- Progress vs Score -->
-
-    <!-- Task Body -->
     <p>Write a function that inserts a new node at a given position.</p>
 
 <ul>
@@ -653,7 +648,7 @@ julien@ubuntu:~/0x13. More singly linked lists$
 <li>if it is not possible to add the new node at index <code>idx</code>, do not add the new node and return <code>NULL</code></li>
 </ul>
 
-<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 9-main.c 
+<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 9-main.c
 #include &lt;stdlib.h&gt;
 #include &lt;string.h&gt;
 #include &lt;stdio.h&gt;
@@ -714,11 +709,6 @@ julien@ubuntu:~/0x13. More singly linked lists$
     </h3>
 
 <div class="panel-body">
-    <span id="user_id" data-id="202475"></span>
-
-    <!-- Progress vs Score -->
-
-    <!-- Task Body -->
     <p>Write a function that deletes the node at index <code>index</code> of a <code>listint_t</code> linked list.</p>
 
 <ul>
