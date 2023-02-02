@@ -1,6 +1,24 @@
 <h1 class="gap">0x06. C - More pointers, arrays and strings</h1>
-<h2>Requirements</h2>
+
+<div class="panel-body">
+<h2>Learning Objectives</h2>
+
+<p>At the end of this project, you are expected to be able to <a href="/rltoken/tkwwPs3MT3JT07FSsmXy-A" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+
 <h3>General</h3>
+
+<ul>
+<li>What are pointers and how to use them</li>
+<li>What are arrays and how to use them</li>
+<li>What are the differences between pointers and arrays</li>
+<li>How to use strings and how to manipulate them</li>
+<li>Scope of variables</li>
+</ul>
+
+<h2>Requirements</h2>
+
+<h3>General</h3>
+
 <ul>
 <li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
 <li>All your files will be compiled on Ubuntu 20.04 LTS using <code>gcc</code>, using the options <code>-Wall -Werror -Wextra -pedantic -std=gnu89</code></li>
@@ -17,15 +35,14 @@
 <li>Don’t forget to push your header file</li>
 </ul>
 
-<h2 class="gap">Tasks</h2>
-
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
-      0. strcat
-    </h3>
   </div>
 
-  <div class="panel-body">
+<h2 class="gap">Tasks</h2>
+<h3 class="panel-title">
+      0. strcat
+    </h3>
+
+<div class="panel-body">
     <p>Write a function that concatenates two strings.</p>
 
 <ul>
@@ -71,14 +88,11 @@ julien@ubuntu:~/0x06$
 
   </div>
 
-
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+<h3 class="panel-title">
       1. strncat
     </h3>
-  </div>
 
-  <div class="panel-body">
+<div class="panel-body">
     <p>Write a function that concatenates two strings.</p>
 
 <ul>
@@ -135,14 +149,12 @@ julien@ubuntu:~/0x06$
 </code></pre>
 
   </div>
-  
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+
+<h3 class="panel-title">
       2. strncpy
     </h3>
-  </div>
 
-  <div class="panel-body">
+<div class="panel-body">
     <p>Write a function that copies a string.</p>
 
 <ul>
@@ -216,13 +228,11 @@ julien@ubuntu:~/0x06$
 
   </div>
 
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+<h3 class="panel-title">
       3. strcmp
     </h3>
-  </div>
 
-  <div class="panel-body">
+<div class="panel-body">
     <p>Write a function that compares two strings.</p>
 
 <ul>
@@ -258,20 +268,14 @@ julien@ubuntu:~/0x06$ ./3-strcmp
 0
 julien@ubuntu:~/0x06$ 
 </code></pre>
-  
-</div>
 
-<div data-role="task893" data-position="5" id="task-num-4">
-      <div class="panel panel-default task-card " id="task-893">
-  <span id="user_id" data-id="202475"></span>
-
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
-      4. I am a kind of paranoid in reverse. I suspect people of plotting to make me happy
-    </h3>
   </div>
 
-  <div class="panel-body">
+<h3 class="panel-title">
+      4. I am a kind of paranoid in reverse. I suspect people of plotting to make me happy
+    </h3>
+
+<div class="panel-body">
     <p>Write a function that reverses the content of an array of integers.</p>
 
 <ul>
@@ -329,13 +333,11 @@ julien@ubuntu:~/0x06$
 </code></pre>
 
   </div>
-        
-<div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+
+<h3 class="panel-title">
       5. Always look up
     </h3>
-  </div>
-        
+
 <div class="panel-body">
     <p>Write a function that changes all lowercase letters of a string to uppercase.</p>
 
@@ -370,12 +372,12 @@ julien@ubuntu:~/0x06$
 </code></pre>
 
   </div>
-        <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+
+<h3 class="panel-title">
       6. Expect the best. Prepare for the worst. Capitalize on what comes
     </h3>
-  </div>
-        <div class="panel-body">
+
+<div class="panel-body">
     <p>Write a function that capitalizes all words of a string.</p>
 
 <ul>
@@ -412,13 +414,12 @@ julien@ubuntu:~/0x06$
 </code></pre>
 
   </div>
-        <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+
+<h3 class="panel-title">
       7. Mozart composed his music not for the elite, but for everybody
     </h3>
-  </div>
-        
-        <div class="panel-body">
+
+<div class="panel-body">
     <p>Write a function that encodes a string into <a href="/rltoken/9v9KfpvWnL0GoMu5mozbug" title="1337" target="_blank">1337</a>.</p>
 
 <ul>
@@ -461,12 +462,12 @@ julien@ubuntu:~/0x06$
 </code></pre>
 
   </div>
-<div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+
+<h3 class="panel-title">
       8. rot13
     </h3>
-  </div>        
-        <div class="panel-body">
+
+<div class="panel-body">
     <p>Write a function that encodes a string using <a href="/rltoken/YRxmNA7BnP6yZhl09TKX3A" title="rot13" target="_blank">rot13</a>.</p>
 
 <ul>
@@ -524,10 +525,12 @@ julien@ubuntu:~/0x06$
 </code></pre>
 
   </div>
-     <h3 class="panel-title">
+
+<h3 class="panel-title">
       9. Numbers have life; they're not just symbols on paper
     </h3>
- <div class="panel-body">
+
+<div class="panel-body">
     <p>Write a function that prints an integer.</p>
 
 <ul>
@@ -572,14 +575,12 @@ julien@ubuntu:~/0x06$
 
   </div>
 
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+<h3 class="panel-title">
       10. A dream doesn't become reality through magic; it takes sweat, determination and hard work
     </h3>
-  </div>
 
-  <div class="panel-body">
-    <p><img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/21b4fc5c1b5df84e6ae4fe8807aa359d929e748a.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230128%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230128T070648Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=f9236f94f94d6340bdf8938664ae60781611f22703a474deb54ddc09e8b44f21" alt="" loading="lazy" style="">
+<div class="panel-body">
+    <p><img src="https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/medias/2020/9/21b4fc5c1b5df84e6ae4fe8807aa359d929e748a.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230202%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230202T093038Z&amp;X-Amz-Expires=86400&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Signature=9b9cfa6f6d1cc61c2dbb608494fd8b4db05d067dc55d102a90410e36ed0b2737" alt="" loading="lazy" style="">
 <br><br>
 Add one line to <a href="https://github.com/holbertonschool/make_magic_happen/blob/master/magic.c" title="this code" target="_blank">this code</a>, so that the program prints <code>a[2] = 98</code>, followed by a new line.</p>
 
@@ -597,13 +598,11 @@ Add one line to <a href="https://github.com/holbertonschool/make_magic_happen/bl
 
   </div>
 
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+<h3 class="panel-title">
       11. It is the addition of strangeness to beauty that constitutes the romantic character in art
     </h3>
-  </div>
 
-  <div class="panel-body">
+<div class="panel-body">
     <p>Write a function that adds two numbers.</p>
 
 <ul>
@@ -688,14 +687,12 @@ julien@ubuntu:~/0x06$
 </code></pre>
 
   </div>
-       
-  <div class="panel-heading panel-heading-actions">
-    <h3 class="panel-title">
+
+<h3 class="panel-title">
       12. Noise is a buffer, more effective than cubicles or booth walls
     </h3>
-  </div>
 
-  <div class="panel-body">
+<div class="panel-body">
     <p>Write a function that prints a buffer.</p>
 
 <ul>
@@ -750,4 +747,6 @@ julien@ubuntu:~/0x06$
 </code></pre>
 
   </div>
-        
+
+## Author
+* **Mayaka Nyaberi** - [The_ Quadzilla](https://github.com/nyaberi-mayaka)

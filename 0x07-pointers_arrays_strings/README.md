@@ -571,3 +571,6 @@ Then <code>sudo apt update</code> and <code>sudo apt install libssl1.0.0</code><
 </ul>
 
   </div>
+
+## Author
+* **Mayaka Nyaberi** - [The_ Quadzilla](https://github.com/nyaberi-mayaka)

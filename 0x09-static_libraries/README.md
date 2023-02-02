@@ -219,3 +219,6 @@ julien@ubuntu:~/0x09. Static Librairies$
 </code></pre>
 
   </div>
+
+## Author
+* **Mayaka Nyaberi** - [The_ Quadzilla](https://github.com/nyaberi-mayaka)

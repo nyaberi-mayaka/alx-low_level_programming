@@ -437,3 +437,6 @@ julien@ubuntu:~/0x0e. Function pointers$
 </ul>
 
   </div>
+
+## Author
+* **Mayaka Nyaberi** - [The_ Quadzilla](https://github.com/nyaberi-mayaka)

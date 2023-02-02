@@ -422,3 +422,6 @@ julien@ubuntu:~/0x01$ ./102-print_comb5
 </code></pre>
 
   </div>
+
+## Author
+* **Mayaka Nyaberi** - [The_ Quadzilla](https://github.com/nyaberi-mayaka)

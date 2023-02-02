@@ -479,3 +479,6 @@ julien@ubuntu:~/0x0a. malloc, free$
 </code></pre>
 
   </div>
+
+## Author
+* **Mayaka Nyaberi** - [The_ Quadzilla](https://github.com/nyaberi-mayaka)

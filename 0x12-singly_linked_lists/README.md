@@ -462,3 +462,6 @@ julien@ubuntu:~/0x12. Singly linked lists$
 </code></pre>
 
   </div>
+
+## Author
+* **Mayaka Nyaberi** - [The_ Quadzilla](https://github.com/nyaberi-mayaka)
