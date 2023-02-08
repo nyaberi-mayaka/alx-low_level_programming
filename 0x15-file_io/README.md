@@ -1,5 +1,9 @@
 <h1 class="gap">0x15. C - File I/O</h1>
 
+<h2>Concepts</h2>
+<li><span class="label label-primary" style="font-size: 14px;">C</span> </li>
+<li><span class="label label-primary" style="font-size: 14px;">Syscall</span></div>
+</li>
 <div class="panel-body">
     <h2>Resources</h2>
 
