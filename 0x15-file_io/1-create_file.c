@@ -12,8 +12,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	size_t len = 0;
-	ssize_t written_letters;
+	ssize_t written;
 
 	mode_t mode = S_IRUSR | S_IWUSR;
 
@@ -22,17 +21,13 @@ int create_file(const char *filename, char *text_content)
 
 	fd = open(filename, O_RDWR | O_CREAT | O_TRUNC, mode);
 
-
-	if (fd < 0)
+	if (fd == -1)
 		return (-1);
-
-	while (text_content[len] != '\0')
-		len++;
 
 	if (text_content != NULL)
 	{
-		written_letters = write(fd, text_content, len);
-		if (written_letters == -1)
+		written = write(fd, text_content, strlen(text_content));
+		if (written == -1)
 			return (-1);
 	}
 	close(fd);
