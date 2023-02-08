@@ -11,6 +11,8 @@
 <li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/fdopen.html#tag_16_126" title="fdopen() man page" target="_blank">fdopen() man page</a> </li>
 <li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/fopen.html#tag_16_155" title="fopen() man page" target="_blank">fopen() man page</a> </li>
 <li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/open.html#tag_16_357" title="open() man page" target="_blank">open() man page</a> </li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/read.html#tag_16_474" title="read() man page" target="_blank">read() man page</a> </li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/write.html#tag_16_685" title="write() man page" target="_blank">write() man page</a> </li>
 
 </ul>
 
