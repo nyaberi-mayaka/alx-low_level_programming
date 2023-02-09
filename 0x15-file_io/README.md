@@ -17,7 +17,8 @@
 <li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/open.html#tag_16_357" title="open() man page" target="_blank">open() man page</a> </li>
 <li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/read.html#tag_16_474" title="read() man page" target="_blank">read() man page</a> </li>
 <li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/write.html#tag_16_685" title="write() man page" target="_blank">write() man page</a> </li>
-
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/dprintf.html" title="dprintf() man page" target="_blank">dprintf() man page</a> </li>
+<li><a href="https://pubs.opengroup.org/onlinepubs/9699919799/functions/close.html#tag_16_67" title="close() man page" target="_blank">close() man page</a> </li>
 </ul>
 
 <p><strong>man or help</strong>:</p>
