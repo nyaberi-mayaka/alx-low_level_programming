@@ -2,10 +2,9 @@
 <h2>Resources</h2>
 <p><strong>Read or watch</strong>:</p>
 <ul>
-<li><a href="/rltoken/XB1iH0qE6gshx0x8TfRAPQ" title="What Is A &quot;C&quot; Library? What Is It Good For?" target="_blank">What Is A “C” Library? What Is It Good For?</a> </li>
-<li><a href="/rltoken/XB1iH0qE6gshx0x8TfRAPQ" title="Creating A Static &quot;C&quot; Library Using &quot;ar&quot; and &quot;ranlib&quot;" target="_blank">Creating A Static “C” Library Using “ar” and “ranlib”</a> </li>
-<li><a href="/rltoken/XB1iH0qE6gshx0x8TfRAPQ" title="Using A &quot;C&quot; Library In A Program" target="_blank">Using A “C” Library In A Program</a> </li>
-<li><a href="/rltoken/PexOGO-npR_ZDQk-SpOR9g" title="What is difference between Dynamic and Static library(Static and Dynamic linking)" target="_blank">What is difference between Dynamic and Static library(Static and Dynamic linking)</a> (<em>stop at 4:44</em>)</li>
+<li><a href="https://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html" title="What Is A &quot;C&quot; Library? What Is It Good For?" target="_blank">What Is A “C” Library? What Is It Good For?</a> </li>
+<li><a href="https://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html" title="Using A &quot;C&quot; Library In A Program" target="_blank">Using A “C” Library In A Program</a> </li>
+<li><a href="https://www.youtube.com/watch?v=eW5he5uFBNM" title="What is difference between Dynamic and Static library(Static and Dynamic linking)" target="_blank">What is difference between Dynamic and Static library(Static and Dynamic linking)</a> (<em>stop at 4:44</em>)</li>
 </ul>
 <p><strong>man or help</strong>:</p>
 <ul>
@@ -14,7 +13,7 @@
 <li><code>nm</code></li>
 </ul>
 <h2>Learning Objectives</h2>
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/dkyFVPYqNQb2pkuknMb9Sw" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 <ul>

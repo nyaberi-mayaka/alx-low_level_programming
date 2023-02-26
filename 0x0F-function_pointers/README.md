@@ -2,14 +2,16 @@
 <h2>Resources</h2>
 <p><strong>Read or watch</strong>:</p>
 <ul>
-<li><a href="/rltoken/yt8Q9jxzT_gyRAvnNkAgkw" title="Function Pointer in C" target="_blank">Function Pointer in C</a> </li>
-<li><a href="/rltoken/wP-yWvo9IqbcQsywMmh_iQ" title="Pointers to functions" target="_blank">Pointers to functions</a> </li>
-<li><a href="/rltoken/dAN27S1yyBPeBa8RGfvPNA" title="Function Pointers in C / C++" target="_blank">Function Pointers in C / C++</a> </li>
-<li><a href="/rltoken/1vvWpH9Ux8axOLc9jPWcMw" title="why pointers to functions?" target="_blank">why pointers to functions?</a> </li>
-<li><a href="/rltoken/G_0lQzs4LAd1e5tKhNMPiw" title="Everything you need to know about pointers in C" target="_blank">Everything you need to know about pointers in C</a> </li>
+<li><a href="https://www.geeksforgeeks.org/function-pointer-in-c/" title="Function Pointer in C" target="_blank">Function Pointer in C</a> </li>
+<li><a href="https://publications.gbdirect.co.uk//c_book/chapter5/function_pointers.html" title="Pointers to functions" target="_blank">Pointers to functions</a> </li>
+<li><a href="https://www.youtube.com/watch?v=ynYtgGUNelE" title="Function Pointers in C / C++" target="_blank">Function Pointers in C / C++</a> </li>
+<li><a href="https://www.youtube.com/watch?v=sxTFSDAZM8s" title="why pointers to functions?" target="_blank">why pointers to functions?</a> </li>
+<li><a href="https://boredzo.org/pointers/" title="Everything you need to know about pointers in C" target="_blank">Everything you need to know about pointers in C</a> </li>
+<li><a href="https://youtu.be/qaszuaFXRTA" title="Function Pointers in C" target="_blank">Function Pointers in C</a> </li>
+</li>
 </ul>
 <h2>Learning Objectives</h2>
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/ITYG4BLMI4_5Unpdwue2tw" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 <h3>General</h3>
 <ul>
 <li>What are function pointers and how to use them</li>

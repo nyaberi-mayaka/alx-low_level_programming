@@ -8,14 +8,14 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/-tOFAtANisYQthxNBmJB8g" title="Google" target="_blank">Google</a> </li>
-<li><a href="https://www.youtube.com/watch?v=htX69j1jf5U" title="Video1" target="_blank">Video_1</a> </li>
-<li><a href="/rltoken/-PNa1vv5T3tqVVY4PRlGrg" title="Youtube" target="_blank">Youtube</a> </li>
+<li><a href="https://www.tutorialspoint.com/ansi_c/c_bits_manipulation.htm" title="tutorials point/" target="_blank"Tutorials Point/</a> </li>
+<li><a href="https://www.youtube.com/watch?v=htX69j1jf5U" title="Youtube" target="_blank">Youtube</a> </li>
+<li><a href="https://youtu.be/egUyaWtsQc0" title="Youtube" target="_blank">Youtube</a> </li>
 </ul>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/I5Fy78OBq-wgaGEpcgq2oA" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 

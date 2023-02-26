@@ -6,13 +6,13 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/2-7-eVuWcPutbXf6YZZgiA" title="Google" target="_blank">Google</a> </li>
-<li><a href="/rltoken/wVWwl86ufLMsXeAigpxllg" title="Youtube" target="_blank">Youtube</a> </li>
+<li><a href="https://www.youtube.com/watch?v=zbozWoMgKW0&t=0s" title="Floyd’s Cycle-Finding Algorithm" target="_blank">Floyd’s Cycle-Finding Algorithm</a> </li>
+<li><a href="https://www.youtube.com/watch?v=jsTybZ5qSNE&list=PLdo5W4Nhv31bbKJzrsKfMpo_grxuLl8LU&index=21" title="Youtube" target="_blank">circular singly linked lists</a> </li>
 </ul>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/jL0iK5DlEbQK5eIwCNDa-g" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 

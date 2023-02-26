@@ -5,13 +5,11 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/wLRJdO8pA2-Vb-rF2Y71sA" title="stdarg.h" target="_blank">stdarg.h</a> </li>
-<li><a href="/rltoken/3gW8GycmyjarbJR76FkrzA" title="Variadic Functions" target="_blank">Variadic Functions</a> </li>
-<li><a href="/rltoken/_RRPCY32VODyN_r2HIEnBQ" title="Const Keyword" target="_blank">Const Keyword</a> </li>
+<li><a href="https://en.wikipedia.org/wiki/Stdarg.h" title="stdarg.h" target="_blank">stdarg.h</a> </li>
+<li><a href="/https://www.gnu.org/software/libc/manual/html_node/Variadic-Functions.html" title="Variadic Functions" target="_blank">Variadic Functions</a> </li>
+<li><a href="https://www.youtube.com/watch?v=1W4oyuOdXv8" title="Const Keyword" target="_blank">Const Keyword</a> </li>
+<li><a href="https://linux.die.net/man/3/stdarg" title="stdarg.h" target="_blank">stdarg.h man page</a> </li>
 </ul>
-
-<!-- - [C - Variable Arguments](/rltoken/qaPJ-LRiEzLvPH6-F3SqJQ) 
-- [Functions with Variable Argument Lists in C using va_list](/rltoken/wEciKT_uR-d9tQHwTWfbHg) -->
 
 <p><strong>man or help</strong>:</p>
 
@@ -21,7 +19,7 @@
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/ibS4gLVrbsqSDUdPhq_4Vg" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 

@@ -9,7 +9,7 @@
       </p>
       <ul>
           <li>
-            <a href="/concepts/120">Data Structures</a>
+            <a href="https://intranet.alxswe.com/concepts/120">Data Structures</a>
           </li>
       </ul>
     </div>
@@ -22,14 +22,14 @@
 <p><strong>Read or watch</strong>:</p>
 
 <ul>
-<li><a href="/rltoken/joxg32-tt4lUh8Afgst8tA" title="Linked Lists" target="_blank">Linked Lists</a> </li>
-<li><a href="/rltoken/USaZbNdfcuIFII-K2YPsKQ" title="Google" target="_blank">Google</a> </li>
-<li><a href="/rltoken/epKUCIcoA6XaN1T3Vtr_9w" title="Youtube" target="_blank">Youtube</a> </li>
+<li><a href="https://www.youtube.com/watch?v=udapt4FGY20&t=130s" title="Linked Lists" target="_blank">Linked Lists</a> </li>
+<li><a href="https://www.youtube.com/watch?v=LUm2ABqAs1w" title="Floyd’s Cycle-Finding Algorithm" target="_blank">Floyd’s Cycle-Finding Algorithm</a> </li>
+<li><a href="https://youtu.be/dmb1i4oN5oE" title="Youtube" target="_blank">Youtube</a> </li>
 </ul>
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/xtUoOGrH_fQu_r19q1Tivw" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 
