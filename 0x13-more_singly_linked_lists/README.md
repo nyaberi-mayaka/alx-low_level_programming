@@ -860,5 +860,344 @@ julien@ubuntu:~/0x13. More singly linked lists$
 
   </div>
 
+<h3 class="panel-title">
+      11. Reverse list
+    </h3>
+    
+<div class="panel-body">
+        <p>Write a function that reverses a <code>listint_t</code> linked list.</p>
+
+<ul>
+<li>Prototype: <code>listint_t *reverse_listint(listint_t **head);</code></li>
+<li>Returns: a pointer to the first node of the reversed list</li>
+<li>You are not allowed to use more than <code>1</code> loop.</li>
+<li>You are not allowed to use <code>malloc</code>, <code>free</code> or arrays</li>
+<li>You can only declare a maximum of two variables in your function</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 100-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+
+    head = NULL;
+    add_nodeint_end(&amp;head, 0);
+    add_nodeint_end(&amp;head, 1);
+    add_nodeint_end(&amp;head, 2);
+    add_nodeint_end(&amp;head, 3);
+    add_nodeint_end(&amp;head, 4);
+    add_nodeint_end(&amp;head, 98);
+    add_nodeint_end(&amp;head, 402);
+    add_nodeint_end(&amp;head, 1024);
+    print_listint(head);
+    reverse_listint(&amp;head);
+    print_listint(head);    
+    free_listint2(&amp;head);
+    return (0);
+}
+julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 100-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 100-reverse_listint.c -o l
+julien@ubuntu:~/0x13. More singly linked lists$ valgrind ./l 
+==3117== Memcheck, a memory error detector
+==3117== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==3117== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==3117== Command: ./l
+==3117== 
+0
+1
+2
+3
+4
+98
+402
+1024
+1024
+402
+98
+4
+3
+2
+1
+0
+==3117== 
+==3117== HEAP SUMMARY:
+==3117==     in use at exit: 0 bytes in 0 blocks
+==3117==   total heap usage: 9 allocs, 9 frees, 1,152 bytes allocated
+==3117== 
+==3117== All heap blocks were freed -- no leaks are possible
+==3117== 
+==3117== For counts of detected and suppressed errors, rerun with: -v
+==3117== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+julien@ubuntu:~/0x13. More singly linked lists$ 
+</code></pre>
+
+  </div>
+  
+  <h3 class="panel-title">
+      12. Print (safe version)
+    </h3>
+    
+<div class="panel-body">
+    <p>Write a function that prints a <code>listint_t</code> linked list.</p>
+
+<ul>
+<li>Prototype: <code>size_t print_listint_safe(const listint_t *head);</code></li>
+<li>Returns: the number of nodes in the list</li>
+<li>This function can print lists with a loop</li>
+<li>You should go through the list only once</li>
+<li>If the function fails, exit the program with status <code>98</code></li>
+<li>Output format: see example</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 101-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    listint_t *head2;
+    listint_t *node;
+
+    head2 = NULL;
+    add_nodeint(&amp;head2, 0);
+    add_nodeint(&amp;head2, 1);
+    add_nodeint(&amp;head2, 2);
+    add_nodeint(&amp;head2, 3);
+    add_nodeint(&amp;head2, 4);
+    add_nodeint(&amp;head2, 98);
+    add_nodeint(&amp;head2, 402);
+    add_nodeint(&amp;head2, 1024);
+    print_listint_safe(head2);
+    head = NULL;
+    node = add_nodeint(&amp;head, 0);
+    add_nodeint(&amp;head, 1);
+    add_nodeint(&amp;head, 2);
+    add_nodeint(&amp;head, 3);
+    add_nodeint(&amp;head, 4);
+    node-&gt;next = add_nodeint(&amp;head, 98);
+    add_nodeint(&amp;head, 402);
+    add_nodeint(&amp;head, 1024);
+    print_listint_safe(head);
+    return (0);
+}
+julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 101-main.c 2-add_nodeint.c 101-print_listint_safe.c -o m
+julien@ubuntu:~/0x13. More singly linked lists$ ./m
+[0x1b500f0] 1024
+[0x1b500d0] 402
+[0x1b500b0] 98
+[0x1b50090] 4
+[0x1b50070] 3
+[0x1b50050] 2
+[0x1b50030] 1
+[0x1b50010] 0
+[0x1b50600] 1024
+[0x1b505e0] 402
+[0x1b505c0] 98
+[0x1b505a0] 4
+[0x1b50580] 3
+[0x1b50560] 2
+[0x1b50540] 1
+[0x1b50110] 0
+-&gt; [0x1b505c0] 98
+julien@ubuntu:~/0x13. More singly linked lists$
+</code></pre>
+
+  </div>
+  
+  <h3 class="panel-title">
+      13. Free (safe version)
+    </h3>
+    
+<div class="panel-body">
+    <p>Write a function that frees a <code>listint_t</code> list.</p>
+
+<ul>
+<li>Prototype: <code>size_t free_listint_safe(listint_t **h);</code></li>
+<li>This function can free lists with a loop</li>
+<li>You should go though the list only once</li>
+<li>Returns: the size of the list that was free’d</li>
+<li>The function sets the <code>head</code> to <code>NULL</code></li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 102-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    listint_t *head2;
+    listint_t *node;
+
+    head2 = NULL;
+    add_nodeint(&amp;head2, 0);
+    add_nodeint(&amp;head2, 1);
+    add_nodeint(&amp;head2, 2);
+    add_nodeint(&amp;head2, 3);
+    add_nodeint(&amp;head2, 4);
+    add_nodeint(&amp;head2, 98);
+    add_nodeint(&amp;head2, 402);
+    add_nodeint(&amp;head2, 1024);
+    print_listint_safe(head2);
+    head = NULL;
+    node = add_nodeint(&amp;head, 0);
+    add_nodeint(&amp;head, 1);
+    add_nodeint(&amp;head, 2);
+    add_nodeint(&amp;head, 3);
+    add_nodeint(&amp;head, 4);
+    node-&gt;next = add_nodeint(&amp;head, 98);
+    add_nodeint(&amp;head, 402);
+    add_nodeint(&amp;head, 1024);
+    print_listint_safe(head);
+    free_listint_safe(&amp;head2);
+    free_listint_safe(&amp;head);
+    printf("%p, %p\n", (void *)head2, (void *)head);
+    return (0);
+}
+julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 102-main.c 2-add_nodeint.c 101-print_listint_safe.c 102-free_listint_safe.c -o n
+julien@ubuntu:~/0x13. More singly linked lists$ ./n 
+[0x11260f0] 1024
+[0x11260d0] 402
+[0x11260b0] 98
+[0x1126090] 4
+[0x1126070] 3
+[0x1126050] 2
+[0x1126030] 1
+[0x1126010] 0
+[0x1126600] 1024
+[0x11265e0] 402
+[0x11265c0] 98
+[0x11265a0] 4
+[0x1126580] 3
+[0x1126560] 2
+[0x1126540] 1
+[0x1126110] 0
+-&gt; [0x11265c0] 98
+(nil), (nil)
+julien@ubuntu:~/0x13. More singly linked lists$ 
+</code></pre>
+
+  </div>
+  
+  <h3 class="panel-title">
+      14. Find the loop
+    </h3>
+    
+<div class="panel-body">
+    <p>Write a function that finds the loop in a linked list.</p>
+
+<ul>
+<li>Prototype: <code>listint_t *find_listint_loop(listint_t *head);</code></li>
+<li>Returns: The address of the node where the loop starts, or <code>NULL</code> if there is no loop</li>
+<li>You are not allowed to use <code>malloc</code>, <code>free</code> or arrays</li>
+<li>You can only declare a maximum of two variables in your function</li>
+</ul>
+
+<pre><code>julien@ubuntu:~/0x13. More singly linked lists$ cat 103-main.c 
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdio.h&gt;
+#include "lists.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+    listint_t *head;
+    listint_t *head2;
+    listint_t *node;
+
+    head2 = NULL;
+    add_nodeint(&amp;head2, 0);
+    add_nodeint(&amp;head2, 1);
+    add_nodeint(&amp;head2, 2);
+    add_nodeint(&amp;head2, 3);
+    add_nodeint(&amp;head2, 4);
+    add_nodeint(&amp;head2, 98);
+    add_nodeint(&amp;head2, 402);
+    add_nodeint(&amp;head2, 1024);
+    print_listint_safe(head2);
+    node = find_listint_loop(head2);
+    if (node != NULL)
+    {
+        printf("Loop starts at [%p] %d\n", (void *)node, node-&gt;n);
+    }
+    free_listint_safe(&amp;head2);
+    head = NULL;
+    node = add_nodeint(&amp;head, 0);
+    add_nodeint(&amp;head, 1);
+    add_nodeint(&amp;head, 2);
+    add_nodeint(&amp;head, 3);
+    add_nodeint(&amp;head, 4);
+    add_nodeint(&amp;head, 5);
+    add_nodeint(&amp;head, 6);
+    node-&gt;next = add_nodeint(&amp;head, 7);
+    add_nodeint(&amp;head, 98);
+    add_nodeint(&amp;head, 402);
+    add_nodeint(&amp;head, 1024);
+    print_listint_safe(head);
+    node = find_listint_loop(head);
+    if (node != NULL)
+    {
+        printf("Loop starts at [%p] %d\n", (void *)node, node-&gt;n);
+    }
+    free_listint_safe(&amp;head);
+    return (0);
+}
+julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 103-main.c 2-add_nodeint.c 101-print_listint_safe.c 102-free_listint_safe.c 103-find_loop.c -o o
+julien@ubuntu:~/0x13. More singly linked lists$ ./o 
+[0x13700f0] 1024
+[0x13700d0] 402
+[0x13700b0] 98
+[0x1370090] 4
+[0x1370070] 3
+[0x1370050] 2
+[0x1370030] 1
+[0x1370010] 0
+[0x1370560] 1024
+[0x1370540] 402
+[0x1370010] 98
+[0x1370030] 7
+[0x1370050] 6
+[0x1370070] 5
+[0x1370090] 4
+[0x13700b0] 3
+[0x13700d0] 2
+[0x13700f0] 1
+[0x1370110] 0
+-&gt; [0x1370030] 7
+Loop starts at [0x1370030] 7
+julien@ubuntu:~/0x13. More singly linked lists$ 
+</code></pre>
+
+  </div>
+
 ## Author
 * **Mayaka Nyaberi** - [The_ Quadzilla](https://github.com/nyaberi-mayaka)
