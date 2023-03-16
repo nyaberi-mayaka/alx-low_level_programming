@@ -2,7 +2,6 @@
 #include <stdlib.h>
 
 int is_palindrome(int n);
-int is_palindrome(int);
 
 /**
  * main - checks for the largest palindrome number within a given range
