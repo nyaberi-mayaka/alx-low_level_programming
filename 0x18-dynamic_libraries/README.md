@@ -1,11 +1,13 @@
 <h1 align="center">0x18. C - Dynamic libraries</h1>
 
+***
 ## Resources
 **Read or watch:**
 
 * [What is difference between Dynamic and Static library (Static and Dynamic linking)](https://www.youtube.com/watch?v=eW5he5uFBNM)
 * [create dynamic libraries on Linux]()
 * [Technical Writing](https://intranet.alxswe.com/concepts/225)
+***
 ## Learning Objectives
 ### General
 * What is a dynamic library, how does it work, how to create one, and how to use it
@@ -13,6 +15,7 @@
 * What are the differences between static and shared libraries
 * Basic usage `nm`, `ldd`, `ldconfig`
 
+***
 ## Requirements
 ### C
 * Allowed editors: `vi`, `vim`, `emacs`
@@ -35,6 +38,7 @@
 * The first line of all your files should be exactly `#!/bin/bash`
 * A `README.md` file, at the root of the folder of the project, describing what each script is doing
 * All your files must be executable
+***
 ## Tasks
 ### 0. A library is not a luxury but one of the necessities of life
 Create the dynamic library libdynamic.so containing all the functions listed below:
@@ -207,6 +211,93 @@ julien@ubuntu:~/0x18$ python3 100-tests.py
 39 % -62 = 39
 julien@ubuntu:~/0x18$ 
 ```
+#### Notes
+To create a dynamic library that contains C functions that can be called from Python, you can follow these steps:
+
+1. Write the C functions you want to include in the dynamic library. For example, let's say you have a function add that takes two integers as arguments and returns their sum.
+	```
+	int add(int a, int b)
+	{
+		return a + b;
+	}
+	```
+2. Compile the source file with the `-fPIC` flag to generate position-independent code . Position-independent code can be loaded and executed at any memory address, which is necessary for shared libraries:
+	```
+	gcc -c -fPIC *myfunctions.c 
+	```
+3. Create a dynamic library using the object file:
+	```
+	gcc -shared -o libmylib.so *.o
+	```
+	This command compiles `mylib.c` into a shared object file named `libmylib.so`. The `-shared` flag tells GCC to create a shared object file instead of an executable, and the `-o` flag specifies the output filename.
+
+4. Install the library by copying it to a system library directory:
+	```
+	 sudo cp libmylib.so /usr/local/lib/
+	```
+	This command installs the library by copying it to a system library directory, which is specified by `/usr/local/lib/` in this example. The `sudo` command is used to gain superuser privileges needed to copy the library to this system directory.
+
+	5. Update the library cache:
+	```
+	 sudo ldconfig
+	```
+	This command updates the system library cache so that the new library is visible to the linker. The `sudo` command is again used to gain superuser privileges needed to update the library cache.
+
+##### calling the library from a python function
+After completing these steps, the C functions defined in `myfunctions.c` should be callable from Python by importing the `ctypes` library and loading the shared library using the `CDLL` function.
+
+1. Create a Python wrapper for the C functions. This allows you to call the C functions from Python. For example:
+	```
+	import ctypes
+
+	# Load the shared library
+	mylib = ctypes.CDLL('/usr/local/lib/libmylib.so')
+
+	def add(a, b):
+		# Define the argument and return types of the add function
+    		mylib.add.argtypes = (ctypes.c_int, ctypes.c_int)
+    		mylib.add.restype = ctypes.c_int
+    	
+    		# Call the add function
+    		return mylib.add(a, b)
+	```
+
+	This code imports the shared object file `libmylib.so` using the `ctypes` library. It then defines a Python function add that calls the `C` function add from the shared object file.
+
+You can now use the add function from Python just like any other Python function:
+
+	```
+	>>> add(2, 3)
+	5
+	```
+##### Calling the library from a c function
+1. Calling the `C` dynamic library (from C)
+	
+	Let us assume the file `call_fct.c` is the C source file calling some functions of the `libmylib.so` library .
+
+	To create the executable, you first compile the source file: 
+	```
+	gcc -c call_fct.c
+	```
+	and then link the created code call_fct.o with the library:
+	```
+	gcc -o call_dynamic call_fct.o -L./ -lmylib
+	```
+	The flag `-L` indicates where the library is to be found and the flag `-l` specifies the library, without the prepending `lib` and file extension `.so`.
+
+	The executable `call_dynamic` is ready for a run.
+
+5. Running a `C` executable linked to a `.so` file
+Running the `call_dynamic` program should be `call_dynamic` or `./call_dynamic` if `./` (the current directory where `call_dynamic` is) is not in the `PATH` variable.
+
+	But the shared library will not be found at runtime if its directory is not in the variable `LD_LIBRARY_PATH` (probably the case by default). Type the following line in the command shell:
+	```
+	if sh or bash shell:         export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
+	if csh or tcsh shell:        setenv LD_LIBRARY_PATH .:$LD_LIBRARY_PATH
+	```
+	In this example the local directory (`./`) is added to the search. Mention in the first case that there is no space around the `=` sign.
+
+	The new path list will be effective only in the shell where you applied the command. If you want the path to be set automatically, copy the line in your shell startup script of your home directory (e.g. `~/.bashrc` if you use a bash shell).
 
 ### 3. Code injection: Win the Giga Millions!
 I bought a ticket for the Giga Millions and chose these numbers: 9, 8, 10, 24, 75 + 9. If you could run two commands on the same server where the Giga Millions program runs, could you make me win the Jackpot?
@@ -250,3 +341,7 @@ mss@gm_server$ ./gm 9 8 10 24 75 9
 mss@gm_server$ exit
 ```
 Tip: `LD_PRELOAD`
+***
+## Author
+* **[The_Quadzilla](https://github.com/nyaberi-mayaka/)**
+***
