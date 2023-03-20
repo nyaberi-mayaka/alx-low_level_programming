@@ -15,6 +15,35 @@
 * What are the differences between static and shared libraries
 * Basic usage `nm`, `ldd`, `ldconfig`
 
+#### Notes
+* `nm` - The `nm` command is used to display the symbol table of a compiled object file shared libraries, and executables. It can be used to examine a dynamic library to see what symbols it exports. This can be useful when trying to diagnose issues with linking or when trying to understand how a library is being used by other programs. To use `nm`, simply run the following command:
+	```
+	nm /path/to/library.so
+	```
+	- This will display a list of symbols that are defined in the library, including function names and variable names.
+	- Example usage: `nm -D mylibrary.so`
+		- This command will list all of the symbols exported by the dynamic library `mylibrary.so`.
+	The -D flag in `nm -D mylibrary.so` tells the `nm` command to display dynamic symbols in the specified shared object file (`mylibrary.so`).
+
+	Dynamic symbols are symbols that are available for use by other objects linked with the shared object file at runtime. This includes functions and variables that are exported from the shared object file, as well as any symbols that the shared object file imports from other shared object files or libraries.
+
+	By default, `nm` displays all symbols in the specified file, including both static and dynamic symbols. The `-D` flag restricts the output to only dynamic symbols.
+
+* `ldd` - The `ldd` command is used to display the shared libraries that a binary executable is linked against. This can be useful when trying to diagnose issues with missing dependencies or when trying to understand how a program is using shared libraries. It can be used to verify that all of the required libraries are available and to see the paths where the libraries are located. To use `ldd`, simply run the following command:
+	```
+	ldd /path/to/binary
+	```
+	- This will display a list of shared libraries that the binary is linked against, along with their paths.
+	- Example usage: `ldd myprogram`
+		- This command will display the shared library dependencies of the executable `myprogram`.
+
+* `ldconfig` - The `ldconfig` command is used to configure the dynamic linker run-time bindings. This is necessary when installing a new shared library, as `ldconfig` needs to be run in order for the library to be found and loaded correctly. To use `ldconfig`, simply run the following command:
+	```
+	ldconfig -n /path/to/new/library
+	```
+	- This will add the new library to the `ldconfig` cache, so that it can be found and loaded by programs that depend on it. It's important to note that this command must be run as root, in order to have the necessary permissions to update the `ldconfig` cache.
+	- Example usage: `sudo ldconfig /usr/local/lib/`
+		- This command will update the shared library cache to include the libraries in the directory `/usr/local/lib/`.
 ***
 ## Requirements
 ### C
@@ -341,6 +370,12 @@ mss@gm_server$ ./gm 9 8 10 24 75 9
 mss@gm_server$ exit
 ```
 Tip: `LD_PRELOAD`
+
+#### Notes
+##### LD_PRELOAD
+* LD_PRELOAD is an environment variable in Linux and other Unix-like operating systems that allows a user to load a specific shared object file (i.e., a dynamic library) before executing a program.
+* When a program is run, the dynamic linker/loader, called ld.so, searches for the necessary shared object files in the directories specified in the default search path (as defined in the ldconfig cache and/or the LD_LIBRARY_PATH environment variable). However, if the LD_PRELOAD environment variable is set, ld.so will first load any shared object files specified in LD_PRELOAD before loading the required shared object files from the default search path.
+* This feature allows users to override some functions or variables used by a program with their own custom implementations. For example, a user can create a shared object file that provides alternative implementations of some standard C library functions and then use LD_PRELOAD to load that shared object file before running a specific program, causing the program to use the alternative implementations instead of the standard ones. This can be useful for debugging, testing, or other purposes.
 ***
 ## Author
 * **[The_Quadzilla](https://github.com/nyaberi-mayaka/)**
