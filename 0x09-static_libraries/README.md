@@ -1,61 +1,56 @@
 <h1 class="gap">0x09. C - Static libraries</h1>
-<h2>Resources</h2>
-<p><strong>Read or watch</strong>:</p>
-<ul>
-<li><a href="https://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html" title="What Is A &quot;C&quot; Library? What Is It Good For?" target="_blank">What Is A “C” Library? What Is It Good For?</a> </li>
-<li><a href="https://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html" title="Using A &quot;C&quot; Library In A Program" target="_blank">Using A “C” Library In A Program</a> </li>
-<li><a href="https://www.youtube.com/watch?v=eW5he5uFBNM" title="What is difference between Dynamic and Static library(Static and Dynamic linking)" target="_blank">What is difference between Dynamic and Static library(Static and Dynamic linking)</a> (<em>stop at 4:44</em>)</li>
-</ul>
-<p><strong>man or help</strong>:</p>
-<ul>
-<li><code>ar</code></li>
-<li><code>ranlib</code></li>
-<li><code>nm</code></li>
-</ul>
-<h2>Learning Objectives</h2>
-<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
-<h3>General</h3>
-<ul>
-<li>What is a static library, how does it work, how to create one, and how to use it</li>
-<li>Basic usage of <code>ar</code>, <code>ranlib</code>, <code>nm</code></li>
-</ul>
-<h2>Requirements</h2>
-<h3>C</h3>
-<ul>
-<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
-<li>All your files will be compiled on Ubuntu 20.04 LTS using <code>gcc</code>, using the options <code>-Wall -Werror -Wextra -pedantic -std=gnu89</code></li>
-<li>All your files should end with a new line</li>
-<li>A <code>README.md</code> file, at the root of the folder of the project is mandatory</li>
-<li>Your code should use the <code>Betty</code> style. It will be checked using <a href="https://github.com/holbertonschool/Betty/blob/master/betty-style.pl" title="betty-style.pl" target="_blank">betty-style.pl</a> and <a href="https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl" title="betty-doc.pl" target="_blank">betty-doc.pl</a></li>
-<li>You are not allowed to use global variables</li>
-<li>No more than 5 functions per file</li>
-<li>You are not allowed to use the standard library. Any use of functions like <code>printf</code>, <code>puts</code>, etc… is forbidden</li>
-<li>You are allowed to use <a href="https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c" title="_putchar" target="_blank">_putchar</a></li>
-<li>You don’t have to push <code>_putchar.c</code>, we will use our file. If you do it won’t be taken into account</li>
-<li>In the following examples, the <code>main.c</code> files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own <code>main.c</code> files at compilation. Our <code>main.c</code> files might be different from the one shown in the examples</li>
-<li>The prototypes of all your functions and the prototype of the function <code>_putchar</code> should be included in your header file called <code>main.h</code></li>
-<li>Don’t forget to push your header file</li>
-</ul>
-<h3>Bash</h3>
-<ul>
-<li>Allowed editors: <code>vi</code>, <code>vim</code>, <code>emacs</code></li>
-<li>All your scripts will be tested on Ubuntu 20.04 LTS</li>
-<li>All your files should end with a new line (<a href="http://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file/18789">why?</a>)</li>
-<li>The first line of all your files should be exactly <code>#!/bin/bash</code></li>
-<li>A <code>README.md</code> file, at the root of the folder of the project, describing what each script is doing</li>
-<li>All your files must be executable</li>
-</ul>
-<h2>More Info</h2>
-<p>You do not need to learn about dynamic libraries, yet.</p>
-<h2 class="gap">Tasks</h2>
-<h3 class="panel-title">
-      0. A library is not a luxury but one of the necessities of life 
-    </h3>
-    <div class="panel-body">
-    <p>Create the static library <code>libmy.a</code> containing all the functions listed below:</p>
+---
+### concepts
+* [C static libraries](https://intranet.alxswe.com/concepts/61)
+---
+## Resources
+**Read or watch**:
+* [What Is A “C” Library? What Is It Good For?](https://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html)
+* [Creating A Static “C” Library Using “ar” and “ranlib” and Using A “C” Library In A Program](https://docencia.ac.upc.edu/FIB/USO/Bibliografia/unix-c-libraries.html)
+* [What is difference between Dynamic and Static library(Static and Dynamic linking)](https://www.youtube.com/watch?v=eW5he5uFBNM)*(stop at 4:44)*
 
-<pre><code>int _putchar(char c);
+**man or help**:
+* ar
+* ranlib
+* nm
+---
+## Learning Objectives
+### General
+* What is a static library, how does it work, how to create one, and how to use it
+* Basic usage of `ar`, `ranlib`, `nm`
+---
+## Requirements
+## C
+* Allowed editors: `vi`, `vim`, `emacs`
+* All your files will be compiled on Ubuntu 20.04 LTS using `gcc`, using the options `-Wall -Werror -Wextra -pedantic -std=gnu89`
+* All your files should end with a new line
+* A `README.md` file, at the root of the folder of the project is mandatory
+* Your code should use the B`etty` style. It will be checked using [betty-style.pl](https://github.com/holbertonschool/Betty/blob/master/betty-style.pl) and [betty-doc.pl](https://github.com/holbertonschool/Betty/blob/master/betty-doc.pl)
+* You are not allowed to use global variables
+* No more than 5 functions per file
+* You are not allowed to use the standard library. Any use of functions like `printf`, `puts`, etc… is forbidden
+* You are allowed to use [_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)
+* You don’t have to push `_putchar.c`, we will use our file. If you do it won’t be taken into account
+* In the following examples, the `main.c` files are shown as examples. You can use them to test your functions, but you don’t have to push them to your repo (if you do we won’t take them into account). We will use our own `main.c` files at compilation. Our `main.c` files might be different from the one shown in the examples
+* The prototypes of all your functions and the prototype of the function `_putchar` should be included in your header file called `main.h`
+* Don’t forget to push your header file
+## Bash
+* Allowed editors: `vi`, `vim`, `emacs`
+* All your scripts will be tested on Ubuntu 20.04 LTS
+* All your files should end with a new line ([why?](https://unix.stackexchange.com/questions/18743/whats-the-point-in-adding-a-new-line-to-the-end-of-a-file/18789))
+* The first line of all your files should be exactly `#!/bin/bash`
+* A `README.md` file, at the root of the folder of the project, describing what each script is doing
+* All your files must be executable
+---
+## More Info
+* You do not need to learn about dynamic libraries, yet.
+---
+## Tasks
+### 0. A library is not a luxury but one of the necessities of life
+Create the static library `libmy.a` containing all the functions listed below:
+```
+int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
 int _abs(int n);
@@ -75,12 +70,12 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
-</code></pre>
+```
 
-<p>If you haven’t coded all of the above functions create empty ones with the right prototype.<br>
-Don’t forget to push your <code>main.h</code> file to your repository. It should at least contain all the prototypes of the above functions.</p>
-
-<pre><code>julien@ubuntu:~/0x09. Static Librairies$ ar -t libmy.a 
+If you haven’t coded all of the above functions create empty ones with the right prototype.
+Don’t forget to push your `main.h` file to your repository. It should at least contain all the prototypes of the above functions.
+```
+julien@ubuntu:~/0x09. Static Librairies$ ar -t libmy.a 
 0-isupper.o
 0-memset.o
 0-strcat.o
@@ -177,17 +172,12 @@ julien@ubuntu:~/0x09. Static Librairies$ ./quote
 "At the end of the day, my goal was to be the best hacker"
     - Kevin Mitnick
 julien@ubuntu:~/0x09. Static Librairies$ 
-</code></pre>
+```
 
-  </div>
-
-<h3 class="panel-title">
-      1. Without libraries what have we? We have no past and no future
-    </h3>
-    <div class="panel-body">
-    <p>Create a script called <code>create_static_lib.sh</code> that creates a static library called <code>liball.a</code> from all the <code>.c</code> files that are in the current directory.</p>
-
-<pre><code>julien@ubuntu:~/0x09. Static Librairies$ ls *.c
+### 1. Without libraries what have we? We have no past and no future
+Create a script called `create_static_lib.sh` that creates a static library called l`iball.a` from all the `.c` files that are in the current directory.
+```
+julien@ubuntu:~/0x09. Static Librairies$ ls *.c
 0-isupper.c  0-strcat.c  1-isdigit.c  1-strncat.c  2-strlen.c   3-islower.c  3-strcmp.c  4-isalpha.c  5-strstr.c  9-strcpy.c  _putchar.c
 0-memset.c   100-atoi.c  1-memcpy.c   2-strchr.c   2-strncpy.c  3-puts.c     3-strspn.c  4-strpbrk.c  6-abs.c
 julien@ubuntu:~/0x09. Static Librairies$ ./create_static_lib.sh 
@@ -214,10 +204,39 @@ julien@ubuntu:~/0x09. Static Librairies$ ar -t liball.a
 6-abs.o
 9-strcpy.o
 _putchar.o
-julien@ubuntu:~/0x09. Static Librairies$ 
-</code></pre>
+julien@ubuntu:~/0x09. Static Librairies$
+```
 
-  </div>
+---
+## Notes
+#### libraries
+* `library` - a collection of objects that are made available for use by other programs.
+* Static libraries are just collections of object files that are linked into the program during the linking phase of compilation, and are not relevant during runtime. This last comment seems obvious, as we already know that object files are also used only during the linking phase, and are not required during runtime - only the program's executable file is needed in order to run the program.
 
+* Shared libraries (also called dynamic libraries) are linked into the program in two stages. First, during compile time, the linker verifies that all the symbols (again, functions, variables and the like) required by the program, are either linked into the program, or in one of its shared libraries. However, the object files from the dynamic library are not inserted into the executable file. Instead, when the program is started, a program in the system (called a dynamic loader) checks out which shared libraries were linked with the program, loads them to memory, and attaches them to the copy of the program in memory.
+* Static libraries are an archive `**.a` file created by the use of `ar` command with some other flags
+	- `c` - create if it does not exist
+	- `r` -  replace older object files in the library, with the new object files.
+	- `s` - index the library
+* the library name starts with `lib'library_name'.a`
+* a header file must exist with all the function prototypes for the library functions
+* The header file must be includes into any source code that links to the library
+* The library contains object files that have been assembles and have a `.o` extension
+* To compile or assemble the source files without linking the, we use `gcc -c` as referenced from [3.2 Options Controlling the Kind of Output](https://gcc.gnu.org/onlinedocs/gcc-12.2.0/gcc/Overall-Options.html#Overall-Options) on GNU GCC manual doc
+* after compiling the files to form object files, archive them with
+```ar -rcs lib***.a *.o```
+* to link to a static library, use the command `gcc source_code.c -l'library_name' - o 'outputname.o'`
+	- the `lib` is dropped and small letter `l` is used instead
+* The following flags can be used during linkage
+	- `L` - specify the location of non-standard include directories
+	- `I` - specify the compiler the directory to look for the header files
+* example linkage
+	- `gcc - o out source.c -L"./'path_to_libary'/l'name_of_library'" -I ./include_header`
+	- 	**Take note of the `l` before the name of the library**
+	- 	No space after `-L` e.g.,
+		+ 	`gcc main.o -L. -lutil -o prog`
+
+---
 ## Author
 * **Mayaka Nyaberi** - [The_ Quadzilla](https://github.com/nyaberi-mayaka)
+---

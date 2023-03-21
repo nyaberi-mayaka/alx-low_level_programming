@@ -1,27 +1,22 @@
-<h1 class="gap">0x00. C - Hello, World</h1>
-<div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">Concepts</h3>
-    </div>
+<h1 align="center">0x00. C - Hello, World</h1>
 
-<div class="panel panel-default" id="project-description">
-  <div class="panel-body">
-<h2>Resources</h2>
+### Concepts
+>*For this project, we expect you to look at this concept:*
 
-<p><strong>Read or watch</strong>:</p>
+>>[C programming](https://intranet.alxswe.com/concepts/26)
 
-<ul>
-<li><a href="/rltoken/P01aLj9BDfDUOv-y9x82Yw" title="Everything you need to know to start with C.pdf" target="_blank">Everything you need to know to start with C.pdf</a> (<em>You do not have to learn everything in there yet, but make sure you read it entirely first</em>)</li>
-<li><a href="/rltoken/YWFrRob_-Yo-_NQikMLI-g" title="Dennis Ritchie" target="_blank">Dennis Ritchie</a> </li>
-<li><a href="/rltoken/W4oygfMgAp5Hyc7o6QuSYQ" title="&quot;C&quot; Programming Language: Brian Kernighan" target="_blank">“C” Programming Language: Brian Kernighan</a> </li>
-<li><a href="/rltoken/WYdE1novaWa0yt5fzGvLBw" title="Why C Programming Is Awesome" target="_blank">Why C Programming Is Awesome</a> </li>
-<li><a href="/rltoken/aE_pZLbexuLroHA0FmjLbw" title="Learning to program in C part 1" target="_blank">Learning to program in C part 1</a> </li>
-<li><a href="/rltoken/3a5y1N-0FlTaPbKRxlRLlQ" title="Learning to program in C part 2" target="_blank">Learning to program in C part 2</a> </li>
-<li><a href="/rltoken/idYJyVfQRZ9e5aljiT5UKg" title="Understanding C program Compilation Process" target="_blank">Understanding C program Compilation Process</a> </li>
-<li><a href="/rltoken/Iu2Vb1CbDPMHuDJG1iILKA" title="Betty Coding Style" target="_blank">Betty Coding Style</a> </li>
-<li><a href="/rltoken/zwv5CHLybXN6KFmsjbu_tg" title="Hash-bang under the hood" target="_blank">Hash-bang under the hood</a> (<em>Look at only after you finish consuming the other resources</em>)</li>
-<li><a href="/rltoken/JrokM8Pk6bd9wPqQvEfSAA" title="Linus Torvalds on C vs. C++" target="_blank">Linus Torvalds on C vs. C++</a> (<em>Look at only after you finish consuming the other resources</em>)</li>
-</ul>
+
+## Resources
+**Read or watch**
+- [Everything you need to know to start with C.pdf](https://s3.amazonaws.com/alx-intranet.hbtn.io/uploads/misc/2022/4/e0ccf91eec6b977a9e00ed384dc285df9c2772e3.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUSBVO6H7D%2F20230307%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230307T032128Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=17a1daf618f07a7e336feeb0b1ad4f02f3cd9b4f00f9e8798614ead8f2d2634c) (You do not have to learn everything in there yet, but make sure you read it entirely first)<br>
+- [Dennis Ritchie](https://en.wikipedia.org/wiki/Dennis_Ritchie)
+- [“C” Programming Language: Brian Kernighan](https://www.youtube.com/watch?v=de2Hsvxaf8M)
+- [Why C Programming Is Awesome](https://www.youtube.com/watch?v=smGalmxPVYc)
+- [Learning to program in C part 1](https://www.youtube.com/watch?v=rk2fK2IIiiQ)
+- [Learning to program in C part 2](https://www.youtube.com/watch?v=FwpP_MsZWnU)
+- [Understanding C program Compilation Process](https://www.youtube.com/watch?v=VDslRumKvRA)
+- [Betty Coding Style](https://github.com/holbertonschool/Betty/wiki)
+- [Linus Torvalds on C vs. C++](http://harmful.cat-v.org/software/c++/linus) (Look at only after you finish consuming the other resources)
 
 <p><strong>man or help</strong>:</p>
 
@@ -34,7 +29,7 @@
 
 <h2>Learning Objectives</h2>
 
-<p>At the end of this project, you are expected to be able to <a href="/rltoken/VGWjGaWZbgcLYTwfLEBmmQ" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
+<p>At the end of this project, you are expected to be able to <a href="https://fs.blog/feynman-learning-technique/?fbclid=IwAR2K5_BGPVo0QjJXkOIIqNsqcXK4lTskPWJvA0asKQIGtCPWaQBdKmj1Ztg" title="explain to anyone" target="_blank">explain to anyone</a>, <strong>without the help of Google</strong>:</p>
 
 <h3>General</h3>
 

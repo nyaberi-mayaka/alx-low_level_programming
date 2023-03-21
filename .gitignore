@@ -1,0 +1,8 @@
+*~
+a.out
+*backup
+*main.c
+a
+*.swp
+*.o
+
