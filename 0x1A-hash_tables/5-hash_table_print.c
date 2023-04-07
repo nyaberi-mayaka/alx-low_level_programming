@@ -23,9 +23,6 @@ void hash_table_print(const hash_table_t *ht)
 			temp = temp->next;
 			flag = 1;
 		}
-
-		if (ht->array[i + 1] && flag)
-			printf(", ");
 	}
 	printf("}\n");
 }
