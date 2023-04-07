@@ -11,36 +11,62 @@
 
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_node = NULL;
 	unsigned long int index;
 	hash_node_t *temp = NULL;
 
-	new_node = malloc(sizeof(hash_node_t));
-
-	if (!new_node)
+	if (ht == NULL || key == NULL || ht->size == 0)
 		return (0);
-
-	new_node->key = malloc(strlen(key) + 1);
-	new_node->value = malloc(strlen(value) + 1);
-
-	strcpy(new_node->key, key);
-	strcpy(new_node->value, value);
-
-	new_node->next = NULL;
 
 	index = key_index((const unsigned char *)key, ht->size);
 
 	if (!ht->array[index])
-		ht->array[index] = new_node;
+	{
+		ht->array[index] = insert_new_node(key, value);
+		return (1);
+	}
 
 	else
 	{
 		temp = ht->array[index];
 
-		while (temp->next)
+		while (temp)
+		{
+			if (!strcmp(temp->key, key))
+			{
+				temp->value = strdup(value);
+				return (1);
+			}
 			temp = temp->next;
-
-		temp->next = new_node;
+		}
+		temp = insert_new_node(key, value);
+		temp->next = ht->array[index];
+		ht->array[index] = temp;
+		return (1);
 	}
-	return (1);
+	return (0);
+}
+
+
+/**
+ * insert_new_node - creates a new hash node
+ * @key: The kay value to be stored
+ * @value: the value associated with the key to be stored
+ *
+ * Return: pointer to the newly created hash node or NULL if it fails
+ */
+hash_node_t *insert_new_node(const char *key, const char *value)
+{
+	hash_node_t *new_node = NULL;
+
+	new_node = malloc(sizeof(hash_node_t));
+
+	if (!new_node)
+		return (NULL);
+
+
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = NULL;
+
+	return (new_node);
 }
