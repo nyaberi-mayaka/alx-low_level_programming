@@ -11,7 +11,7 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned long int i;
 	char flag = 0;
 
-	if (!ht || ht->array)
+	if (!ht || !ht->array)
 		return;
 
 	printf("{");
