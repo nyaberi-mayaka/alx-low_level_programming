@@ -7,6 +7,32 @@
  */
 shash_table_t *shash_table_create(unsigned long int size)
 {
+	shash_table_t *new_table = NULL;
+	unsigned long int i;
+
+	if (size == 0)
+		return (NULL);
+
+	new_table = malloc(sizeof(shash_table_t));
+
+	if (!new_table)
+		return (NULL);
+
+	new_table->size = size;
+	new_table->array = malloc(size * sizeof(shash_node_t *));
+
+	if (!new_table->array)
+	{
+		free(new_table);
+		return (NULL);
+	}
+
+	for (i = 0; i < new_table->size; i++)
+		new_table->array[i] = NULL;
+
+	new_table->shead = new_table->stail = NULL;
+
+	return (new_table);
 }
 
 /**
